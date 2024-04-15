@@ -1,9 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import UserProvider from "./Context/UserProvider";
 
-// import App from './App';
-import Signup from './components/Signup'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Signup />);
-
+ReactDOM.render(
+<UserProvider>   
+   <BrowserRouter>
+        <App/>
+   </BrowserRouter>
+</UserProvider>  
+,document.getElementById("root"))

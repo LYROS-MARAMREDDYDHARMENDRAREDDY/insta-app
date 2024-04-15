@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from "react";
+import Signup from "./Components/Signup"
+import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
+import {Routes,Route} from "react-router-dom"
 
-export default function App() {
-  return (
-    <div> 
-      <h1>Hello-World</h1>
-    </div>
-  )
+function App(){
+    
+return(
+    <div className="App">
+        <Routes>
+            <Route path="/" element={<Signup/>}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/dashboard" element={<Dashboard/>}/>
+        </Routes>
+   </div>
+    )
+
 }
 
+export default App;
