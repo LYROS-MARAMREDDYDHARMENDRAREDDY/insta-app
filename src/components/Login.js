@@ -58,7 +58,9 @@ const Login=()=>{
                 onChange={updateUser}
                 value={user.password}
                 /><br></br><br></br>
-                <button type="submit">Submit</button>
+                <button type="submit"  onClick={() => {
+            window.location.href = "/post";
+          }}>Submit</button>
             </form>
         </div>
     )

@@ -87,43 +87,26 @@ return(
                 onChange={updateUser}
                 value={user.confirmPassword}
                 />
-                <br>
-                </br>
+               
 
-                <button type="submit">Submit</button>
+                {/* <button type="submit">Submit</button> */}
+                 <br>
+                 </br>
+                 <button
+          type="button"
+           onClick={() => {
+    if (user.password !== user.confirmPassword) {
+      alert("Password and confirm password do not match");
+      return;
+    }
+    
+    window.location.href = "/Login";
+  }} 
+>
+  Submit
+</button>
              </form>
         </div>
     )
 } 
 export default Signup;
-
-
-
-
-
-
-
-
-
-
-//const[name,setName]=useState("");
-// const[email,setEmail]=useState("");
-// const[password,setPassword]=useState("");
-// const[confirmpassword,setConfirmPassword]=useState("");
-
-
-// function updateName(e){
-//     setUser({...user,name:e.target.value})
-// }
-
-// function updateEmail(){
-//     setUser({...user,email:e.target.value})
-// }
-
-// function updatePassword(){
-//     setUser({...user,password:e.target.value})
-// }
-
-// function updateConfirmPassword(e){
-//     setUser({...user,confirmPassword:e.target.value})
-// }
